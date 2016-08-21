@@ -15,6 +15,8 @@
 		3D81A1381BB13C8C004F95A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D81A1361BB13C8C004F95A8 /* LaunchScreen.storyboard */; };
 		3D81A1431BB13C8D004F95A8 /* languageMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A1421BB13C8D004F95A8 /* languageMemoTests.swift */; };
 		3D81A14E1BB13C8D004F95A8 /* languageMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A14D1BB13C8D004F95A8 /* languageMemoUITests.swift */; };
+		3D81A15C1BB1403D004F95A8 /* word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A15B1BB1403D004F95A8 /* word.swift */; settings = {ASSET_TAGS = (); }; };
+		3D81A15E1BB140F0004F95A8 /* wordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A15D1BB140F0004F95A8 /* wordTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3D81A1491BB13C8D004F95A8 /* languageMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = languageMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D81A14D1BB13C8D004F95A8 /* languageMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = languageMemoUITests.swift; sourceTree = "<group>"; };
 		3D81A14F1BB13C8D004F95A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D81A15B1BB1403D004F95A8 /* word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = word.swift; sourceTree = "<group>"; };
+		3D81A15D1BB140F0004F95A8 /* wordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wordTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				3D81A12B1BB13C8C004F95A8 /* AppDelegate.swift */,
 				3D81A12D1BB13C8C004F95A8 /* FirstViewController.swift */,
+				3D81A15B1BB1403D004F95A8 /* word.swift */,
+				3D81A15D1BB140F0004F95A8 /* wordTableViewController.swift */,
 				3D81A12F1BB13C8C004F95A8 /* SecondViewController.swift */,
 				3D81A1311BB13C8C004F95A8 /* Main.storyboard */,
 				3D81A1341BB13C8C004F95A8 /* Assets.xcassets */,
@@ -259,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D81A1301BB13C8C004F95A8 /* SecondViewController.swift in Sources */,
+				3D81A15E1BB140F0004F95A8 /* wordTableViewController.swift in Sources */,
+				3D81A15C1BB1403D004F95A8 /* word.swift in Sources */,
 				3D81A12C1BB13C8C004F95A8 /* AppDelegate.swift in Sources */,
 				3D81A12E1BB13C8C004F95A8 /* FirstViewController.swift in Sources */,
 			);
