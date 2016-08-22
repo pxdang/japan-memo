@@ -15,8 +15,9 @@
 		3D81A1381BB13C8C004F95A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D81A1361BB13C8C004F95A8 /* LaunchScreen.storyboard */; };
 		3D81A1431BB13C8D004F95A8 /* languageMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A1421BB13C8D004F95A8 /* languageMemoTests.swift */; };
 		3D81A14E1BB13C8D004F95A8 /* languageMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A14D1BB13C8D004F95A8 /* languageMemoUITests.swift */; };
-		3D81A15C1BB1403D004F95A8 /* word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A15B1BB1403D004F95A8 /* word.swift */; settings = {ASSET_TAGS = (); }; };
-		3D81A15E1BB140F0004F95A8 /* wordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A15D1BB140F0004F95A8 /* wordTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3D81A15C1BB1403D004F95A8 /* word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A15B1BB1403D004F95A8 /* word.swift */; };
+		3D81A15E1BB140F0004F95A8 /* wordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81A15D1BB140F0004F95A8 /* wordTableViewController.swift */; };
+		624C000B1D6A95F700DEB59B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624C000A1D6A95F700DEB59B /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		3D81A14F1BB13C8D004F95A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D81A15B1BB1403D004F95A8 /* word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = word.swift; sourceTree = "<group>"; };
 		3D81A15D1BB140F0004F95A8 /* wordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wordTableViewController.swift; sourceTree = "<group>"; };
+		624C00071D6A8E7300DEB59B /* languageMemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = languageMemo.entitlements; sourceTree = "<group>"; };
+		624C000A1D6A95F700DEB59B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				624C000B1D6A95F700DEB59B /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,7 @@
 		3D81A11F1BB13C8C004F95A8 = {
 			isa = PBXGroup;
 			children = (
+				624C000A1D6A95F700DEB59B /* CloudKit.framework */,
 				3D81A12A1BB13C8C004F95A8 /* languageMemo */,
 				3D81A1411BB13C8D004F95A8 /* languageMemoTests */,
 				3D81A14C1BB13C8D004F95A8 /* languageMemoUITests */,
@@ -103,6 +108,7 @@
 		3D81A12A1BB13C8C004F95A8 /* languageMemo */ = {
 			isa = PBXGroup;
 			children = (
+				624C00071D6A8E7300DEB59B /* languageMemo.entitlements */,
 				3D81A12B1BB13C8C004F95A8 /* AppDelegate.swift */,
 				3D81A12D1BB13C8C004F95A8 /* FirstViewController.swift */,
 				3D81A15B1BB1403D004F95A8 /* word.swift */,
@@ -201,6 +207,12 @@
 				TargetAttributes = {
 					3D81A1271BB13C8C004F95A8 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 44R2KLH497;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					3D81A13D1BB13C8D004F95A8 = {
 						CreatedOnToolsVersion = 7.0;
@@ -410,10 +422,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = languageMemo/languageMemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dang Phung (VZBUBTH78X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dang Phung (VZBUBTH78X)";
 				INFOPLIST_FILE = languageMemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = phung.xuan.languageMemo;
+				PRODUCT_BUNDLE_IDENTIFIER = phung.dang.languagememo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -421,10 +437,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = languageMemo/languageMemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = languageMemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = phung.xuan.languageMemo;
+				PRODUCT_BUNDLE_IDENTIFIER = phung.dang.languagememo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -495,6 +515,7 @@
 				3D81A1541BB13C8D004F95A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D81A1551BB13C8D004F95A8 /* Build configuration list for PBXNativeTarget "languageMemoTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +524,7 @@
 				3D81A1571BB13C8D004F95A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D81A1581BB13C8D004F95A8 /* Build configuration list for PBXNativeTarget "languageMemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +533,7 @@
 				3D81A15A1BB13C8D004F95A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
